@@ -2,7 +2,7 @@
   <h1>Hi, I'm Dmitriy (xeraze)!</h1>
   <h3>Fullstack Developer</h3>
   <a href="https://t.me/xrzeoff"><img src="https://img.shields.io/badge/Telegram-grey?style=for-the-badge&logo=telegram&logoColor=white" /></a>
-  <a href="https://discord.gg/c4DrXDc5kX"><img src="https://img.shields.io/badge/Discord-gray%3Fstyle%3Dfor-the-badge%26logo%3Ddiscord%26logoColor%3Dwhite" /></a>
+  <a href="https://discord.gg/c4DrXDc5kX"><img src="https://img.shields.io/badge/Discord-gray?style=for-the-badge&logo=discord&logoColor=white" /></a>
 </div>
 
 ---
@@ -26,11 +26,10 @@
 ---
 
 # :fire: My Stats
-[![wakatime](https://wakatime.com/badge/user/xrze.svg?style=for-the-badge)](https://wakatime.com/@xrze) 
 
 <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=xeraze&theme=gruvbox" alt="Сводка профиля"/>
 <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=xeraze&theme=gruvbox" alt="Статистика GitHub"/>
 
-[![GitHub Streak](http://github-readme-streak-stats.herokuapp.com?user=xeraze&theme=gruvbox&hide_border=true&date_format=j%20M%5B%20Y%5D)](https://github.com/xeraze)
-
 [![Xrze WakaTime Stats](https://github-readme-stats.vercel.app/api/wakatime?username=xrze&show_icons=true&theme=gruvbox)](https://wakatime.com/@xrze)
+
+[![GitHub Streak](http://github-readme-streak-stats.herokuapp.com?user=xeraze&theme=gruvbox&hide_border=true&date_format=j%20M%5B%20Y%5D)](https://github.com/xeraze)
