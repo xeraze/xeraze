@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>xeraze | Fullstack Developer</title>
+    <!-- Используем шрифт Work Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
+        /* ОСНОВНОЙ СТИЛЬ */
         body {
-            font-family: 'Courier New', sans-serif;
+            font-family: 'Work Sans', sans-serif;
             background-color: #161616;
             color: #ffffff;
             margin: 0;
@@ -20,6 +23,7 @@
             position: relative;
         }
 
+        /* СТИЛЬ ДЛЯ GIF ФОНА */
         .background-gif {
             position: fixed;
             top: 0;
@@ -34,58 +38,60 @@
             width: 100%;
             height: 100%;
             object-fit: cover; 
-            filter: brightness(0.3); 
+            filter: brightness(0.3) grayscale(20%); 
         }
 
+        /* ГЛАВНЫЙ КОНТЕЙНЕР / ЕДИНЫЙ ЭМБЕД */
         .container {
             z-index: 1; 
             width: 100%;
-            max-width: 700px; 
-            padding: 20px 0;
+            max-width: 450px; 
             text-align: center;
 
-            background-color: rgba(42, 42, 42, 0.9);
-            border-radius: 8px;
-            padding: 30px 25px; 
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+            background-color: rgba(30, 30, 30, 0.95);
+            border-radius: 12px;
+            padding: 30px 20px; 
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
             
             transition: transform 0.1s ease-out; 
             transform-style: preserve-3d;
         }
 
+        /* Внутренние секции */
         .inner-section {
             text-align: left;
             margin: 20px 0;
-            padding-top: 10px;
-            border-top: 1px solid rgba(255, 255, 255, 0.08); 
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1); 
         }
         .inner-section:first-child {
             border-top: none;
             margin-top: 0;
         }
         
+        /* АВАТАРКА */
         .avatar-container {
             margin-bottom: 20px;
-            padding-top: 0;
         }
         .avatar {
-            width: 120px;
-            height: 120px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
-            border: 3px solid #ffffff;
+            border: 4px solid #4CAF50; 
             object-fit: cover;
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
         }
         
+        /* ГЛАВНЫЕ ЗАГОЛОВКИ */
         h1 {
             color: #ffffff;
-            font-size: 2.5em;
+            font-size: 1.8em;
             font-weight: 700;
             margin-bottom: 0.2em;
         }
         h2 {
-            font-size: 1.2em;
-            color: #cccccc;
+            font-size: 1em;
+            color: #aaaaaa;
             font-weight: 400;
             margin-top: 0;
             margin-bottom: 20px;
@@ -98,40 +104,48 @@
             text-transform: uppercase;
         }
 
+        /* МИНИМАЛИСТИЧНЫЕ ИКОНКИ КОНТАКТОВ */
         .contact-icons {
             display: flex;
             justify-content: center;
-            gap: 15px;
+            gap: 10px;
             margin-bottom: 10px;
         }
-        .contact-icons a {
-            display: block;
-            width: 40px;
-            height: 40px;
+        .contact-icons a, .contact-icons button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
             border-radius: 50%;
             background-color: #383838;
             color: #ffffff;
-            line-height: 40px;
-            font-size: 20px;
-            text-align: center;
+            border: none;
+            cursor: pointer;
             transition: transform 0.2s, background-color 0.2s;
+            padding: 0;
         }
-        .contact-icons a:hover {
+        .contact-icons a:hover, .contact-icons button:hover {
             transform: translateY(-2px) scale(1.05);
-            background-color: #555;
+            background-color: #4CAF50; /* Акцентный цвет наведения */
+        }
+        .contact-icons svg {
+            width: 18px;
+            height: 18px;
         }
 
+        /* СТИЛЬ КАРТОЧЕК ПРОЕКТОВ (ВИДЖЕТЫ) */
         .project-card {
             display: flex;
             align-items: flex-start;
             padding: 15px;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             background-color: #2a2a2a;
             border-radius: 6px;
             transition: box-shadow 0.3s;
         }
         .project-card:hover {
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 4px 10px rgba(76, 175, 80, 0.2); 
         }
         .project-icon-container {
             flex-shrink: 0;
@@ -143,12 +157,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            overflow: hidden;
+            border: 1px solid #4CAF50; /* Добавим рамку для акцента */
         }
         .project-icon {
-            width: 100%;
-            height: 100%;
+            width: 90%;
+            height: 90%;
             object-fit: contain;
-            border-radius: 4px;
         }
         .project-details {
             flex-grow: 1;
@@ -158,6 +173,7 @@
             margin-top: 0;
             margin-bottom: 2px;
             font-size: 1.1em;
+            color: #4CAF50;
         }
         .project-details p {
             font-size: 0.9em;
@@ -165,61 +181,131 @@
             margin-bottom: 5px;
         }
         
+        /* Иконки соцсетей для проектов */
         .project-links a {
             display: inline-block;
-            margin-right: 8px;
+            margin-right: 10px;
             color: #ccc;
             transition: color 0.2s;
         }
         .project-links a:hover {
-            color: #fff;
+            color: #4CAF50;
         }
 
-        .lanyard-status img {
+        /* МОДАЛЬНОЕ ОКНО "ОБО МНЕ" */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 10;
+            left: 0;
+            top: 0;
             width: 100%;
-            max-width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 4px;
-            filter: brightness(0.9);
-            border: 1px solid #404040;
-            box-sizing: border-box;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .modal-content {
+            background-color: #2a2a2a;
+            margin: 10% auto; /* Подняли чуть выше */
+            padding: 30px;
+            border: 1px solid #4CAF50;
+            width: 90%;
+            max-width: 450px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+            position: relative;
+            animation-name: animatetop;
+            animation-duration: 0.4s
+        }
+        /* Анимация модального окна */
+        @keyframes animatetop {
+            from {top: -300px; opacity: 0}
+            to {top: 10%; opacity: 1}
+        }
+
+        .close-btn {
+            color: #ccc;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            transition: color 0.2s;
+            line-height: 20px;
+            cursor: pointer;
+        }
+        .close-btn:hover,
+        .close-btn:focus {
+            color: #4CAF50;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
 
+    <!-- МОДАЛЬНОЕ ОКНО "ОБО МНЕ" -->
+    <div id="aboutModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3 style="color: #4CAF50; margin-top: 0; text-align: center;">ОБО МНЕ</h3>
+            <p style="text-align: left; color: #ccc; font-size: 1em;">
+                Дмитрий, 15+ лет, Fullstack разработчик и веб-дизайнер из Украины. Из основных занятий: кодинг и гейминг. Выполняю свою работу качественно и в установленные дедлайны (если такие есть). Особого прайс-листа нет (пока-что, он просто в разработке и если выпущен то дополняется), но могу сделать "почти" что-угодно. Отвечаю чаще всего в Discord или Telegram. Пожалуйста, если желаете написать мне ТЗ то пишите его структуированно и подробно. В большинстве случаев я сяду за вашу работу сразу.
+            </p>
+            <p style="text-align: center; margin-top: 20px; color: #fff; font-weight: bold; font-size: 1.1em;">
+                (Если это читает какой-нибудь работодатель, возьмите меня к себе на работу пожалуйста 🙏)
+            </p>
+        </div>
+    </div>
+    
+    <!-- GIF ФОН -->
     <div class="background-gif">
-        <img src="https://cdn.discordapp.com/attachments/1340232585795604511/1423648502092927117/3493304.gif" alt="Фоновое GIF-изображение">
+        <!-- Очищенный URL для гарантии загрузки -->
+        <img src="https://cdn.discordapp.com/attachments/1340232585795604511/1423648502092927117/3493304.gif" alt="Фоновое GIF-изображение" onerror="this.style.display='none';">
     </div>
 
+    <!-- ГЛАВНЫЙ КОНТЕЙНЕР / ЕДИНЫЙ ЭМБЕД -->
     <div class="container" id="main-card">
+        <!-- АВАТАРКА -->
         <div class="avatar-container">
-            <img class="avatar" src="https://cdn.discordapp.com/attachments/1340232585795604511/1423646315149000704/Arno_Breker_La_Force.jpg" alt="Аватар xeraze">
+            <!-- Очищенный URL для гарантии загрузки -->
+            <img class="avatar" src="https://cdn.discordapp.com/attachments/1340232585795604511/1423646315149000704/Arno_Breker_La_Force.jpg" alt="Аватар xeraze" onerror="this.src='https://placehold.co/100x100/333/FFF?text=XER';">
         </div>
         
+        <!-- ГЛАВНЫЙ ЗАГОЛОВОК И ПОДЗАГОЛОВОК -->
         <h1>xeraze</h1>
         <h2>Fullstack Developer | 15 y.o</h2>
 
+        <!-- МИНИМАЛИСТИЧНЫЕ ИКОНКИ КОНТАКТОВ -->
         <div class="contact-icons inner-section" style="border-top: none; margin-top: 0; padding-top: 0;">
-            <a href="https://t.me/xrzeoff" title="Telegram">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zM8.287 5.205l-1.354 4.053-1.666 4.996 4.698-1.57 3.33-2.614-7.01-4.865-1.161.464 1.161-.464 1.161-.464zM8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14z"/><path d="M8.287 5.205l-1.354 4.053-1.666 4.996 4.698-1.57 3.33-2.614-7.01-4.865-1.161.464 1.161-.464 1.161-.464z"/></svg>
+            <!-- КНОПКА "ОБО МНЕ" -->
+            <button id="aboutBtn" title="Подробнее обо мне">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/><path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.889.131 1.254.954 1.254.552 0 1.04-.236 1.185-.756l.725-2.428h.025c.14-.54.21-.837.29-.074zm-2.344-.657c-.112-.394-.153-.655-.138-.876.02-.309.233-.483.504-.484.275-.001.442.148.513.51.057.346.027.7-.09 1.144z"/></svg>
+            </button>
+            <!-- Telegram (Личный) -->
+            <a href="https://t.me/xrzeoff" title="Telegram (Личный)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zM8.287 5.205l-1.354 4.053-1.666 4.996 4.698-1.57 3.33-2.614-7.01-4.865-1.161.464 1.161-.464 1.161-.464zM8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14z"/><path d="M8.287 5.205l-1.354 4.053-1.666 4.996 4.698-1.57 3.33-2.614-7.01-4.865-1.161.464 1.161-.464 1.161-.464z"/></svg>
             </a>
+            <!-- Discord (Копирование ника) -->
+            <button onclick="copyDiscordName('xeraze')" title="Скопировать Discord ник: xeraze">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M13.784 1.058A15.82 15.82 0 0 0 11.233 0c-1.304-.002-2.583.18-3.833.535C6.155.183 4.876-.002 3.57 0A15.82 15.82 0 0 0 .216 1.058c-.116.326-.01.564.246.993.447.765.98 1.488 1.62 2.158.077.085.158.156.23.238.16.184.32.355.474.529a14.87 14.87 0 0 0 4.26 2.383c.758.26 1.545.43 2.35.502.805-.072 1.592-.242 2.35-.502a14.87 14.87 0 0 0 4.26-2.383c.154-.174.314-.345.474-.529.072-.082.153-.153.23-.238.64-.67 1.173-1.393 1.62-2.158.256-.429.362-.667.246-.993zM10.875 5.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0zM5.125 5.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0z"/><path d="M8 8.75c-.75 0-1.5-.16-2.25-.47a.75.75 0 0 1 .75-1.29c.6.26 1.2.39 1.8.39.6 0 1.2-.13 1.8-.39a.75.75 0 0 1 .75 1.29c-.75.31-1.5.47-2.25.47z"/>
+                </svg>
+            </button>
+            <!-- GitHub -->
             <a href="https://github.com/xeraze" title="GitHub">
-                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.03 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.21 0 .21.15.46.55.38C13.71 14.53 16 11.54 16 8c0-4.42-3.58-8-8-8z"/>
+                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.03 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.21 0 .21.15.46.55.38C13.71 14.53 16 11.54 16 8c0-4.42-3.58-8-8-8z"/>
                 </svg>
             </a>
+            <!-- Email -->
             <a href="mailto:xeraze.official@gmail.com" title="Email">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.708 2.825L15 11.105V5.383zm-.035 6.883L8 10.02 1.035 12.266C.36 12.37.525 12.872 1 12.872h14c.475 0 .64-.499.006-.628zM1 11.105l4.708-2.825L1 5.383v5.722z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.708 2.825L15 11.105V5.383zm-.035 6.883L8 10.02 1.035 12.266C.36 12.37.525 12.872 1 12.872h14c.475 0 .64-.499.006-.628zM1 11.105l4.708-2.825L1 5.383v5.722z"/></svg>
             </a>
-            <a href="https://discord.gg/c4DrXDc5kX" title="Discord Server">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M13.784 1.058A15.82 15.82 0 0 0 11.233 0c-1.304-.002-2.583.18-3.833.535C6.155.183 4.876-.002 3.57 0A15.82 15.82 0 0 0 .216 1.058c-.116.326-.01.564.246.993.447.765.98 1.488 1.62 2.158.077.085.158.156.23.238.16.184.32.355.474.529a14.87 14.87 0 0 0 4.26 2.383c.758.26 1.545.43 2.35.502.805-.072 1.592-.242 2.35-.502a14.87 14.87 0 0 0 4.26-2.383c.154-.174.314-.345.474-.529.072-.082.153-.153.23-.238.64-.67 1.173-1.393 1.62-2.158.256-.429.362-.667.246-.993zM10.875 5.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0zM5.125 5.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0z"/><path d="M8 8.75c-.75 0-1.5-.16-2.25-.47a.75.75 0 0 1 .75-1.29c.6.26 1.2.39 1.8.39.6 0 1.2-.13 1.8-.39a.75.75 0 0 1 .75 1.29c-.75.31-1.5.47-2.25.47z"/>
-                </svg>
+            <!-- Telegram (Канал) -->
+            <a href="https://t.me/Den4ikSuperOstryyPer4ik" title="Telegram Channel">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M12.64 0H3.36C1.5 0 0 1.5 0 3.36v9.28C0 14.5 1.5 16 3.36 16h9.28C14.5 16 16 14.5 16 12.64V3.36C16 1.5 14.5 0 12.64 0zM12 4.75a.75.75 0 0 1 0 1.5H8.25V12h-1.5V6.25H4V4.75h8z"/></svg>
             </a>
         </div>
 
+        <!-- БЛОК DISCORD RICH PRESENCE (СТАТУС) -->
         <div class="inner-section">
-            <h3>Status</h3>
+            <h3>🤖 Discord Rich Presence (Status)</h3>
             <div class="lanyard-status" style="text-align: center;">
                 <img 
                     src="https://api.lanyard.rest/v1/users/1114421253781073991/status" 
@@ -227,48 +313,42 @@
                 />
             </div>
         </div>
-
+        
+        <!-- БЛОК ПРОЕКТОВ (ВИДЖЕТЫ - Скорректированы ссылки и логотипы) -->
         <div class="inner-section">
-            <h3>💻 Main Instruments</h3>
-            <div class="icon-list">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" title="Python" alt="py" width="50" height="50"/>
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" title="PHP" alt="php" width="50" height="50"/>
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" title="Java" alt="java" width="50" height="50"/>
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" title="JavaScript" alt="js" width="50" height="50"/>
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" title="TypeScript" alt="ts" width="50" height="50"/>
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" title="Node.js" alt="njs" width="50" height="50"/>
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" title="C" alt="c" width="50" height="50"/>
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" title="C++" alt="c++" width="50" height="50"/>
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" title="C#" alt="c#" width="50" height="50"/>
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/lua/lua-original.svg" title="Lua" alt="lua" width="50" height="50"/>
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" title="CSS" alt="css" width="50" height="50"/>
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" title="HTML5" alt="html" width="50" height="50"/>
-            </div>
-        </div>
+            <h3>📌 My current projects</h3>
             
-                <div class="project-card">
-                <div class="project-icon-container" style="background-color: #555555;">
-                    <img src="https://i.ibb.co/q0Vd145/jZZ7q7Xm.png" alt="Kherson Logo" class="project-icon">
+            <!-- Проект 1: @khersoninroblox -->
+            <div class="project-card">
+                <div class="project-icon-container">
+                    <img src="https://i.ibb.co/q0Vd145/jZZ7q7Xm.png" alt="Kherson Logo" class="project-icon" onerror="this.onerror=null;this.src='https://placehold.co/40x40/4CAF50/FFF?text=Map';">
                 </div>
                 <div class="project-details">
-                    <a href="#" style="text-decoration: none;"><h4>@khersoninroblox</h4></a>
-                    <p>Roblox-project, based on popular town in South-East Ukraine.</p>
+                    <h4>@khersoninroblox</h4>
+                    <p>Roblox project, based on popular town in South-East Ukraine.</p>
                     <div class="project-links">
-                        <a href="https://t.me/khersonrp_bot" title="Telegram Bot">
+                        <!-- Telegram Channel (подразумевается, что это основной канал проекта) -->
+                        <a href="https://t.me/khersonrp" title="Telegram Channel">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zM8.287 5.205l-1.354 4.053-1.666 4.996 4.698-1.57 3.33-2.614-7.01-4.865-1.161.464 1.161-.464 1.161-.464z"/></svg>
+                        </a>
+                        <!-- Telegram Bot (дополнительная ссылка) -->
+                         <a href="https://t.me/khersonrp_bot" title="Telegram Bot">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M10.854 7.207a.5.5 0 0 0-.708-.708L7.5 8.793V3.75a.5.5 0 0 0-1 0v5.043l-2.646-2.646a.5.5 0 1 0-.708.708l3.5 3.5a.5.5 0 0 0 .708 0l3.5-3.5z"/></svg>
                         </a>
                     </div>
                 </div>
             </div>
 
+            <!-- Проект 2: XERAZE's DEVELOPMENTS -->
             <div class="project-card">
-                <div class="project-icon-container" style="background-color: #383838;">
-                     <img src="https://i.ibb.co/hN0t34j/20G4NTnz.png" alt="Xeraze Dev Logo" class="project-icon">
+                <div class="project-icon-container">
+                     <img src="https://i.ibb.co/hN0t34j/20G4NTnz.png" alt="Xeraze Dev Logo" class="project-icon" onerror="this.onerror=null;this.src='https://placehold.co/40x40/4CAF50/FFF?text=X';">
                 </div>
                 <div class="project-details">
-                    <a href="https://discord.gg/c4DrXDc5kX" style="text-decoration: none;"><h4>XERAZE's DEVELOPMENTS (Global)</h4></a>
+                    <h4>XERAZE's DEVELOPMENTS (Global)</h4>
                     <p>My own project and forum for sending reviews.</p>
                     <div class="project-links">
+                        <!-- Discord Server (только эта ссылка) -->
                         <a href="https://discord.gg/c4DrXDc5kX" title="Discord Server">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M13.784 1.058A15.82 15.82 0 0 0 11.233 0c-1.304-.002-2.583.18-3.833.535C6.155.183 4.876-.002 3.57 0A15.82 15.82 0 0 0 .216 1.058c-.116.326-.01.564.246.993.447.765.98 1.488 1.62 2.158.077.085.158.156.23.238.16.184.32.355.474.529a14.87 14.87 0 0 0 4.26 2.383c.758.26 1.545.43 2.35.502.805-.072 1.592-.242 2.35-.502a14.87 14.87 0 0 0 4.26-2.383c.154-.174.314-.345.474-.529.072-.082.153-.153.23-.238.64-.67 1.173-1.393 1.62-2.158.256-.429.362-.667.246-.993zM10.875 5.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0zM5.125 5.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0z"/><path d="M8 8.75c-.75 0-1.5-.16-2.25-.47a.75.75 0 0 1 .75-1.29c.6.26 1.2.39 1.8.39.6 0 1.2-.13 1.8-.39a.75.75 0 0 1 .75 1.29c-.75.31-1.5.47-2.25.47z"/>
                         </svg>
@@ -277,18 +357,17 @@
                 </div>
             </div>
 
+            <!-- Проект 3: Mafia and City -->
             <div class="project-card">
-                <div class="project-icon-container" style="background-color: #383838;">
-                    <img src="https://i.ibb.co/6Z8mQ0p/wrW411KW.png" alt="Mafia Logo" class="project-icon">
+                <div class="project-icon-container">
+                    <img src="https://i.ibb.co/6Z8mQ0p/wrW411KW.png" alt="Mafia Logo" class="project-icon" onerror="this.onerror=null;this.src='https://placehold.co/40x40/4CAF50/FFF?text=Skull';">
                 </div>
                 <div class="project-details">
-                    <a href="https://discord.gg/pXCaC5jxp7" style="text-decoration: none;"><h4>Mafia and City (Discord)</h4></a>
+                    <h4>Mafia and City (Discord)</h4>
                     <p>Reborn server/project with new directions and a major boost to new development.</p>
                     <div class="project-links">
-                        <a href="https://discord.gg/pXCaC5jxp7" title="Discord Server">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M13.784 1.058A15.82 15.82 0 0 0 11.233 0c-1.304-.002-2.583.18-3.833.535C6.155.183 4.876-.002 3.57 0A15.82 15.82 0 0 0 .216 1.058c-.116.326-.01.564.246.993.447.765.98 1.488 1.62 2.158.077.085.158.156.23.238.16.184.32.355.474.529a14.87 14.87 0 0 0 4.26 2.383c.758.26 1.545.43 2.35.502.805-.072 1.592-.242 2.35-.502a14.87 14.87 0 0 0 4.26-2.383c.154-.174.314-.345.474-.529.072-.082.153-.153.23-.238.64-.67 1.173-1.393 1.62-2.158.256-.429.362-.667.246-.993zM10.875 5.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0zM5.125 5.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0z"/><path d="M8 8.75c-.75 0-1.5-.16-2.25-.47a.75.75 0 0 1 .75-1.29c.6.26 1.2.39 1.8.39.6 0 1.2-.13 1.8-.39a.75.75 0 0 1 .75 1.29c-.75.31-1.5.47-2.25.47z"/>
-                        </svg>
-                        </a>
+                        <!-- В MafiaWorld нет ссылок, кроме Discord, но Discord указан в названии. Оставим без ссылок, как вы просили: "mafia and city без ссылок" -->
+                        <!-- Ссылки не добавляем -->
                     </div>
                 </div>
             </div>
@@ -298,29 +377,66 @@
     </div>
     
     <script>
+        // ИНТЕРАКТИВНЫЙ НАКЛОН КАРТОЧКИ
         const card = document.getElementById('main-card');
-        const sensitivity = 5;
+        const sensitivity = 5; // Чувствительность наклона
 
         card.addEventListener('mousemove', (e) => {
             const rect = card.getBoundingClientRect();
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
-
             const centerX = rect.width / 2;
             const centerY = rect.height / 2;
-
             const offsetX = (x - centerX) / centerX;
             const offsetY = (y - centerY) / centerY;
-
             const rotateY = offsetX * sensitivity; 
             const rotateX = -offsetY * sensitivity; 
-
             card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
         });
 
         card.addEventListener('mouseleave', () => {
             card.style.transform = `rotateX(0deg) rotateY(0deg)`;
         });
+
+        // ФУНКЦИЯ КОПИРОВАНИЯ DISCORD
+        function copyDiscordName(name) {
+            // Создаем временный элемент input
+            const tempInput = document.createElement('input');
+            tempInput.value = name;
+            document.body.appendChild(tempInput);
+            
+            // Выделяем и копируем текст
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+            
+            // Показываем сообщение (вместо alert())
+            const message = document.createElement('div');
+            message.textContent = `Discord ник ${name} скопирован!`;
+            message.style.cssText = 'position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background-color: #4CAF50; color: white; padding: 10px 20px; border-radius: 5px; z-index: 1000; opacity: 0; transition: opacity 0.5s;';
+            document.body.appendChild(message);
+            
+            setTimeout(() => { message.style.opacity = '1'; }, 10);
+            setTimeout(() => { message.style.opacity = '0'; }, 2000);
+            setTimeout(() => { message.remove(); }, 2500);
+        }
+
+        // ОБРАБОТКА МОДАЛЬНОГО ОКНА "ОБО МНЕ"
+        const modal = document.getElementById("aboutModal");
+        const btn = document.getElementById("aboutBtn");
+        const span = document.getElementsByClassName("close-btn")[0];
+
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
     </script>
 </body>
 </html>
