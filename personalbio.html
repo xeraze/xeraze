@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
-            font-family: 'Source Code Pro', monospace;
+            font-family: 'Source Code Pro', monospace; 
             background-color: #111111; 
             color: #eeeeee; 
             margin: 0;
@@ -169,7 +169,7 @@
             margin-right: 8px;
             color: #888;
             transition: color 0.2s;
-            text-decoration: none;
+            text-decoration: none; 
         }
         .project-links a:hover {
             color: #ccc;
@@ -215,6 +215,53 @@
         .close-btn:hover, .close-btn:focus {
             color: #fff;
             text-decoration: none;
+        }
+        
+        .rpc-widget {
+            background-color: #333;
+            border-radius: 6px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            text-align: left;
+            min-height: 50px;
+        }
+        .rpc-info {
+            flex-grow: 1;
+            padding-left: 10px;
+        }
+        .rpc-title {
+            font-weight: 700;
+            font-size: 1em;
+            color: #eee;
+            margin: 0;
+        }
+        .rpc-state {
+            font-size: 0.9em;
+            color: #ccc;
+            margin: 0;
+        }
+        .rpc-buttons {
+            margin-top: 5px;
+        }
+        .rpc-buttons a {
+            display: inline-block;
+            background-color: #555;
+            color: #fff;
+            padding: 3px 8px;
+            margin-right: 5px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            text-decoration: none;
+            transition: background-color 0.2s;
+        }
+        .rpc-buttons a:hover {
+            background-color: #777;
+        }
+        .rpc-fallback {
+            text-align: center;
+            color: #888;
+            font-size: 0.9em;
         }
     </style>
 </head>
@@ -264,7 +311,62 @@
             </button>
         </div>
 
-       <script>
+        <div class="inner-section" style="padding-top: 15px; border-top: 1px solid #333;">
+            <div id="rpc-container">
+                <p class="rpc-fallback">Загрузка Discord активности...</p>
+            </div>
+        </div>
+
+        <div class="inner-section">
+            
+            <div class="project-card">
+                <div class="project-icon-container">
+                    <img src="project1.jpg" alt="Kherson Logo" class="project-icon" onerror="this.src='https://placehold.co/40x40/444/FFF?text=P1';">
+                </div>
+                <div class="project-details">
+                    <h4>Kherson RP</h4>
+                    <p>Roblox project, based on popular town in South-East Ukraine.</p>
+                    <div class="project-links">
+                        <a href="https://t.me/khersonrp" title="Telegram Channel">
+                            <i class="fab fa-telegram-plane"></i>
+                        </a>
+                        <a href="https://t.me/khersonrp_bot" title="Telegram Bot">
+                            <i class="fas fa-robot"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon-container">
+                     <img src="project2.png" alt="Xeraze Dev Logo" class="project-icon" onerror="this.src='https://placehold.co/40x40/444/FFF?text=P2';">
+                </div>
+                <div class="project-details">
+                    <h4>XERAZE's DEVELOPMENTS (Global)</h4>
+                    <p>My own project and forum for sending reviews.</p>
+                    <div class="project-links">
+                        <a href="https://discord.gg/c4DrXDc5kX" title="Discord Server">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon-container">
+                    <img src="project3.png" alt="Mafia Logo" class="project-icon" onerror="this.src='https://placehold.co/40x40/444/FFF?text=P3';">
+                </div>
+                <div class="project-details">
+                    <h4>Mafia and City (Discord)</h4>
+                    <p>Reborn server/project with new directions and a major boost to new development.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    
+    <script>
         const DISCORD_USER_ID = '1114421253781073991';
         const RPC_CONTAINER = document.getElementById('rpc-container');
 
@@ -285,13 +387,13 @@
             try {
                 const response = await fetch(`https://api.lanyard.rest/v1/users/${DISCORD_USER_ID}`);
                 const data = await response.json();
-                if (!data.success || data.data.activities.length === 0 || data.data.discord_status === 'offline') {
 
+                if (!data.success || data.data.discord_status === 'offline') {
                     RPC_CONTAINER.innerHTML = `<p class="rpc-fallback">❌ Сейчас нет активной деятельности.</p>`;
                     return;
                 }
 
-                const activity = data.data.activities.find(act => act.type === 0 || act.name === 'GitHub' || act.name === 'Разработки Серверов');
+                const activity = data.data.activities.find(act => act.type === 0) || data.data.activities[0];
 
                 if (!activity) {
                     RPC_CONTAINER.innerHTML = `<p class="rpc-fallback">✅ В сети, но нет отображаемой активности.</p>`;
@@ -301,9 +403,9 @@
                 let html = `
                     <div class="rpc-widget">
                         <div class="rpc-info">
-                            <p class="rpc-title">${activity.name}</p>
-                            <p class="rpc-state">${activity.details || '—'}</p>
-                            <p class="rpc-state">${activity.state || '—'}</p>
+                            <p class="rpc-title">${activity.name || 'Активность'}</p>
+                            ${activity.details ? `<p class="rpc-state">${activity.details}</p>` : ''}
+                            ${activity.state ? `<p class="rpc-state">${activity.state}</p>` : ''}
                             ${activity.timestamps && activity.timestamps.start ? `<p class="rpc-state">🕒 ${formatTime(activity.timestamps.start)} elapsed</p>` : ''}
                             
                             ${activity.buttons && activity.buttons.length > 0 ? `
@@ -319,16 +421,15 @@
 
             } catch (error) {
                 console.error("Ошибка при получении Lanyard данных:", error);
-                RPC_CONTAINER.innerHTML = `<p class="rpc-fallback">⚠️ Ошибка загрузки RPC-статуса.</p>`;
+                RPC_CONTAINER.innerHTML = `<p class="rpc-fallback">⚠️ Ошибка загрузки RPC-статуса (Проверьте консоль).</p>`;
             }
         }
 
         fetchDiscordActivity();
         setInterval(fetchDiscordActivity, 15000);
 
-
         const card = document.getElementById('main-card');
-        const sensitivity = 5;
+        const sensitivity = 5; 
 
         card.addEventListener('mousemove', (e) => {
             const rect = card.getBoundingClientRect();
@@ -381,3 +482,5 @@
             }
         }
     </script>
+</body>
+</html>
