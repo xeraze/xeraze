@@ -30,6 +30,6 @@
 <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=xeraze&theme=gruvbox" alt="Сводка профиля"/>
 <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=xeraze&theme=gruvbox" alt="Статистика GitHub"/>
 
-[![Xrze WakaTime Stats](https://github-readme-stats.vercel.app/api/wakatime?username=xrze&show_icons=true&theme=gruvbox)](https://wakatime.com/@xrze)
+[![wakatime](https://wakatime.com/badge/user/6497b568-9c69-450f-9359-54ab7684a0cd.svg)](https://wakatime.com/@6497b568-9c69-450f-9359-54ab7684a0cd)
 
 [![GitHub Streak](http://github-readme-streak-stats.herokuapp.com?user=xeraze&theme=gruvbox&hide_border=true&date_format=j%20M%5B%20Y%5D)](https://github.com/xeraze)
