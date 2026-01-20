@@ -2,7 +2,7 @@
   <h1>Hi, I'm Dmitriy (xeraze)!</h1>
   <h3>Fullstack Developer</h3>
   <a href="https://t.me/xrzeoff"><img src="https://img.shields.io/badge/Telegram-grey?style=for-the-badge&logo=telegram&logoColor=white" /></a>
-  <a href="https://discord.gg/c4DrXDc5kX"><img src="https://img.shields.io/badge/Discord-gray?style=for-the-badge&logo=discord&logoColor=white" /></a>
+  <a href="https://discord.gg/tXFxhTcm7H"><img src="https://img.shields.io/badge/Discord-gray?style=for-the-badge&logo=discord&logoColor=white" /></a>
 </div>
 
 ---
