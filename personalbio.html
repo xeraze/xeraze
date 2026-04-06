@@ -11,7 +11,7 @@
     <style>
         body {
             font-family: 'Source Code Pro', monospace; 
-            background-color: #111111; 
+            background-color: #0a0a0a; 
             color: #eeeeee; 
             margin: 0;
             padding: 30px; 
@@ -20,7 +20,7 @@
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            perspective: 1000px; 
+            perspective: 1200px; 
             position: relative;
         }
 
@@ -46,40 +46,53 @@
             width: 100%;
             max-width: 450px; 
             text-align: center;
-            background-color: rgba(30, 30, 30, 0.95);
-            border-radius: 12px;
-            padding: 30px 20px; 
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
-            
-            transition: transform 0.1s ease-out; 
+            background: rgba(20, 20, 20, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 16px;
+            padding: 35px 25px; 
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8);
+            transition: transform 0.15s ease-out, box-shadow 0.3s ease; 
             transform-style: preserve-3d;
-            border: 1px solid #333; 
+            border: 1px solid rgba(255, 255, 255, 0.05); 
+        }
+        
+        .container:hover {
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9), 0 0 20px rgba(255, 255, 255, 0.02);
         }
         
         .avatar-container {
             margin-bottom: 20px;
+            transform: translateZ(30px);
         }
         .avatar {
-            width: 100px;
-            height: 100px;
+            width: 110px;
+            height: 110px;
             border-radius: 50%;
-            border: 3px solid #666; 
+            border: 3px solid #555; 
             object-fit: cover;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+            transition: border-color 0.3s ease;
+        }
+        .container:hover .avatar {
+            border-color: #888;
         }
         
         h1 {
             color: #ffffff;
-            font-size: 1.8em;
+            font-size: 2em;
             font-weight: 700;
-            margin-bottom: 0.2em;
+            margin-bottom: 0.1em;
+            transform: translateZ(20px);
+            letter-spacing: -0.5px;
         }
         h2 {
-            font-size: 1em;
+            font-size: 0.95em;
             color: #aaaaaa;
             font-weight: 400;
             margin-top: 0;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            transform: translateZ(15px);
         }
         h3 {
             color: #eeeeee;
@@ -87,67 +100,112 @@
             margin-bottom: 15px;
             font-size: 1.1em;
             text-transform: uppercase;
-            border-bottom: 1px solid #333;
-            padding-bottom: 5px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 8px;
+            letter-spacing: 1px;
         }
 
         .contact-icons {
             display: flex;
             justify-content: center;
-            gap: 10px;
-            margin-bottom: 10px;
+            gap: 12px;
+            margin-bottom: 15px;
+            transform: translateZ(10px);
         }
         .contact-icons a, .contact-icons button {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 38px;
-            height: 38px;
+            width: 42px;
+            height: 42px;
             border-radius: 50%;
-            background-color: #333;
+            background-color: rgba(255, 255, 255, 0.05);
             color: #ffffff;
-            border: none;
+            border: 1px solid rgba(255, 255, 255, 0.1);
             cursor: pointer;
-            transition: background-color 0.2s, color 0.2s;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             padding: 0;
             font-size: 18px;
             text-decoration: none; 
         }
         .contact-icons a:hover, .contact-icons button:hover {
-            background-color: #555;
+            background-color: #fff;
+            color: #000;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+        }
+
+        .pricelist-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            padding: 14px 20px;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
             color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 10px;
+            font-family: 'Source Code Pro', monospace;
+            font-weight: 700;
+            font-size: 0.95em;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            transform: translateZ(15px);
+        }
+        .pricelist-btn:hover {
+            background: linear-gradient(135deg, #2a2a2a, #3a3a3a);
+            border-color: rgba(255, 255, 255, 0.4);
+            transform: translateZ(15px) translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+        }
+        .pricelist-btn i {
+            font-size: 1.2em;
+        }
+
+        .inner-section {
+            padding-top: 20px; 
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            transform: translateZ(5px);
         }
 
         .project-card {
             display: flex;
             align-items: flex-start;
-            padding: 12px;
-            margin-bottom: 10px;
-            background-color: #222;
-            border-radius: 6px;
-            border-left: 3px solid #555; 
-            transition: border-color 0.3s, box-shadow 0.3s;
+            padding: 14px;
+            margin-bottom: 12px;
+            background-color: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+            border-left: 3px solid #444; 
+            transition: all 0.3s ease;
         }
         .project-card:hover {
-            border-left-color: #888;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); 
+            border-left-color: #fff;
+            background-color: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); 
+            transform: translateX(4px);
         }
         .project-icon-container {
             flex-shrink: 0;
-            width: 40px; 
-            height: 40px;
+            width: 45px; 
+            height: 45px;
             margin-right: 15px;
-            border-radius: 4px;
-            background-color: #444;
+            border-radius: 8px;
+            background-color: #111;
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
         .project-icon {
-            width: 90%;
-            height: 90%;
-            object-fit: contain;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         .project-details {
             flex-grow: 1;
@@ -155,62 +213,77 @@
         }
         .project-details h4 {
             margin-top: 0;
-            margin-bottom: 2px;
+            margin-bottom: 4px;
             font-size: 1em;
             color: #ffffff;
+            font-weight: 600;
         }
         .project-details p {
-            font-size: 0.85em;
-            color: #ccc;
-            margin-bottom: 5px;
+            font-size: 0.8em;
+            color: #aaa;
+            margin-bottom: 8px;
+            line-height: 1.4;
         }
         
         .project-links a {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
             margin-right: 8px;
+            background: rgba(0,0,0,0.3);
+            border-radius: 6px;
             color: #888;
-            transition: color 0.2s;
+            transition: all 0.2s;
             text-decoration: none; 
+            font-size: 0.9em;
         }
         .project-links a:hover {
-            color: #ccc;
+            color: #fff;
+            background: rgba(255,255,255,0.1);
         }
 
         .modal {
             display: none;
             position: fixed;
-            z-index: 10;
+            z-index: 100;
             left: 0;
             top: 0;
             width: 100%;
             height: 100%;
             overflow: auto;
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
         }
         .modal-content {
-            background-color: #222;
+            background-color: #1a1a1a;
             margin: 10% auto;
-            padding: 30px;
-            border: 1px solid #444;
+            padding: 35px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
             width: 90%;
-            max-width: 450px;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+            max-width: 500px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
             position: relative;
             animation-name: animatetop;
-            animation-duration: 0.4s
+            animation-duration: 0.4s;
+            animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
         }
         @keyframes animatetop {
-            from {top: -300px; opacity: 0}
-            to {top: 10%; opacity: 1}
+            from {top: -50px; opacity: 0; transform: scale(0.95);}
+            to {top: 0; opacity: 1; transform: scale(1);}
         }
         .close-btn {
-            color: #ccc;
-            float: right;
+            color: #666;
+            position: absolute;
+            right: 20px;
+            top: 20px;
             font-size: 28px;
             font-weight: bold;
             transition: color 0.2s;
-            line-height: 20px;
+            line-height: 1;
             cursor: pointer;
         }
         .close-btn:hover, .close-btn:focus {
@@ -219,50 +292,57 @@
         }
         
         .rpc-widget {
-            background-color: #333;
-            border-radius: 6px;
-            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 12px 15px;
             display: flex;
             align-items: center;
             text-align: left;
             min-height: 50px;
+            transition: background-color 0.3s;
+        }
+        .rpc-widget:hover {
+            background-color: rgba(255, 255, 255, 0.05);
         }
         .rpc-info {
             flex-grow: 1;
-            padding-left: 10px;
+            padding-left: 12px;
         }
         .rpc-title {
             font-weight: 700;
-            font-size: 1em;
-            color: #eee;
-            margin: 0;
+            font-size: 0.95em;
+            color: #fff;
+            margin: 0 0 3px 0;
         }
         .rpc-state {
-            font-size: 0.9em;
-            color: #ccc;
+            font-size: 0.85em;
+            color: #aaa;
             margin: 0;
+            line-height: 1.3;
         }
         .rpc-buttons {
-            margin-top: 5px;
+            margin-top: 8px;
         }
         .rpc-buttons a {
             display: inline-block;
-            background-color: #555;
+            background-color: rgba(255, 255, 255, 0.1);
             color: #fff;
-            padding: 3px 8px;
-            margin-right: 5px;
-            border-radius: 4px;
+            padding: 4px 10px;
+            margin-right: 6px;
+            border-radius: 6px;
             font-size: 0.8em;
             text-decoration: none;
             transition: background-color 0.2s;
         }
         .rpc-buttons a:hover {
-            background-color: #777;
+            background-color: rgba(255, 255, 255, 0.2);
         }
         .rpc-fallback {
             text-align: center;
-            color: #888;
-            font-size: 0.9em;
+            color: #666;
+            font-size: 0.85em;
+            padding: 10px 0;
         }
     </style>
 </head>
@@ -271,11 +351,11 @@
     <div id="aboutModal" class="modal">
         <div class="modal-content">
             <span class="close-btn">&times;</span>
-            <h3 style="color: #eee; margin-top: 0; text-align: center;">ОБО МНЕ</h3>
-            <p style="text-align: left; color: #ccc; font-size: 1em;">
-                Дмитрий, 15+ лет, Fullstack разработчик и веб-дизайнер из Украины. Из основных занятий: кодинг и гейминг. Выполняю свою работу качественно и в установленные дедлайны (если такие есть). Прайс-лист: https://is.gd/xrzeprice | Отвечаю чаще всего в Discord. Пожалуйста, если желаете написать мне ТЗ то пишите его структуированно и развернуто. В противном случае я не гарантирую работы, которую вы желаете увидеть. В большинстве случаев я сяду за вашу работу сразу.
+            <h3 style="color: #fff; margin-top: 0; text-align: center; border-bottom: none;">ОБО МНЕ</h3>
+            <p style="text-align: left; color: #ccc; font-size: 0.95em; line-height: 1.6;">
+                Дмитрий, 15+ лет, Fullstack разработчик и веб-дизайнер из Украины. Из основных занятий: коддинг и гейминг. Выполняю свою работу качественно и в установленные дедлайны (если такие есть). Прайс-лист: <a href="https://xeraze.github.io/Pricelist/" target="_blank" style="color: #fff; font-weight: bold; text-decoration: underline;">https://xeraze.github.io/Pricelist/</a> | Отвечаю чаще всего в Discord. Пожалуйста, если желаете написать мне ТЗ то пишите его структуированно и развернуто. В противном случае я не гарантирую работы, которую вы желаете увидеть. В большинстве случаев я сяду за вашу работу сразу.
             </p>
-            <p style="text-align: center; margin-top: 20px; color: #fff; font-weight: bold; font-size: 1.1em;">
+            <p style="text-align: center; margin-top: 25px; color: #fff; font-weight: bold; font-size: 1em;">
                 (Если это читает какой-нибудь работодатель, буду рад сотрудничеству!)
             </p>
         </div>
@@ -287,14 +367,13 @@
 
     <div class="container" id="main-card">
         <div class="avatar-container">
-            <img class="avatar" src="image1.jpg" alt="Аватар xeraze" onerror="this.src='https://placehold.co/100x100/333/FFF?text=XER';">
+            <img class="avatar" src="image1.jpg" alt="Аватар xeraze" onerror="this.src='https://placehold.co/110x110/222/FFF?text=XER';">
         </div>
         
         <h1>xeraze</h1>
         <h2>Fullstack Developer | 15 y.o</h2>
 
-        <div class="contact-icons" style="margin-top: 20px; padding-top: 0; border-top: none;">
-            
+        <div class="contact-icons">
             <a href="https://t.me/xrzeoff" title="Telegram (Личный)">
                 <i class="fab fa-telegram-plane"></i>
             </a>
@@ -312,7 +391,12 @@
             </button>
         </div>
 
-        <div class="inner-section" style="padding-top: 15px; border-top: 1px solid #333;">
+        <a href="https://xeraze.github.io/Pricelist/" target="_blank" class="pricelist-btn">
+            <i class="fas fa-file-invoice-dollar"></i>
+            Professional Services & Pricelist
+        </a>
+
+        <div class="inner-section">
             <div id="rpc-container">
                 <p class="rpc-fallback">Загрузка Discord активности...</p>
             </div>
@@ -322,7 +406,33 @@
             
             <div class="project-card">
                 <div class="project-icon-container">
-                    <img src="logokherson.png" alt="Kherson, Ukraine Logo" class="project-icon" onerror="this.src='https://placehold.co/40x40/444/FFF?text=P1';">
+                    <img src="frosty.jpg" alt="Frosty Logo" class="project-icon" onerror="this.src='https://placehold.co/40x40/222/FFF?text=FR';">
+                </div>
+                <div class="project-details">
+                    <h4>Frosty</h4>
+                    <p>Innovative development solution & platform.</p>
+                    <div class="project-links">
+                        <a href="#" title="Website"><i class="fas fa-globe"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon-container">
+                    <img src="gaynezium-p.jpg" alt="Gedonizium Logo" class="project-icon" onerror="this.src='https://placehold.co/40x40/222/FFF?text=GE';">
+                </div>
+                <div class="project-details">
+                    <h4>Gedonizium</h4>
+                    <p>Creative platform focused on unique user experience and design.</p>
+                    <div class="project-links">
+                        <a href="#" title="Website"><i class="fas fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon-container">
+                    <img src="logokherson.png" alt="Kherson, Ukraine Logo" class="project-icon" onerror="this.src='https://placehold.co/40x40/222/FFF?text=KH';">
                 </div>
                 <div class="project-details">
                     <h4>Kherson, Ukraine</h4>
@@ -340,7 +450,7 @@
 
             <div class="project-card">
                 <div class="project-icon-container">
-                     <img src="project2.png" alt="Xeraze Dev Logo" class="project-icon" onerror="this.src='https://placehold.co/40x40/444/FFF?text=P2';">
+                     <img src="project2.png" alt="Xeraze Dev Logo" class="project-icon" onerror="this.src='https://placehold.co/40x40/222/FFF?text=XD';">
                 </div>
                 <div class="project-details">
                     <h4>XERAZE's DEVELOPMENTS (Global)</h4>
@@ -352,6 +462,9 @@
                     </div>
                 </div>
             </div>
+
+        </div>
+    </div>
     
     <script>
         const DISCORD_USER_ID = '1404735389603860503';
@@ -393,7 +506,7 @@
                             <p class="rpc-title">${activity.name || 'Активность'}</p>
                             ${activity.details ? `<p class="rpc-state">${activity.details}</p>` : ''}
                             ${activity.state ? `<p class="rpc-state">${activity.state}</p>` : ''}
-                            ${activity.timestamps && activity.timestamps.start ? `<p class="rpc-state">🕒 ${formatTime(activity.timestamps.start)} elapsed</p>` : ''}
+                            ${activity.timestamps && activity.timestamps.start ? `<p class="rpc-state" style="margin-top: 4px; color: #888;">🕒 ${formatTime(activity.timestamps.start)} elapsed</p>` : ''}
                             
                             ${activity.buttons && activity.buttons.length > 0 ? `
                                 <div class="rpc-buttons">
@@ -445,7 +558,7 @@
             
             const message = document.createElement('div');
             message.textContent = `Discord ник ${name} скопирован!`;
-            message.style.cssText = 'position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background-color: #333; color: white; padding: 10px 20px; border-radius: 5px; z-index: 1000; opacity: 0; transition: opacity 0.5s;';
+            message.style.cssText = 'position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background-color: #333; color: white; padding: 12px 24px; border-radius: 8px; z-index: 1000; opacity: 0; transition: opacity 0.4s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.5); font-weight: 600; border: 1px solid #555;';
             document.body.appendChild(message);
             
             setTimeout(() => { message.style.opacity = '1'; }, 10);
