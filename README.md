@@ -25,11 +25,11 @@
   <tr>
     <td width="50%" valign="top">
       <strong>Backend</strong><br />
-      <img src="https://skillicons.dev/icons?i=c,cs,cpp,java,nodejs,rust,py,lua,npm&perline=3" />
+      <img src="https://skillicons.dev/icons?i=c,cs,cpp,java,nodejs,rust,py,lua,npm" />
     </td>
     <td width="50%" valign="top">
       <strong>Frontend</strong><br />
-      <img src="https://skillicons.dev/icons?i=html,css,js,ts,react&perline=3" />
+      <img src="https://skillicons.dev/icons?i=html,css,js,ts,react" />
     </td>
   </tr>
 </table>
