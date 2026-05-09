@@ -58,7 +58,3 @@
 </div>
 
 <br/>
-
-<div align="center">
-  <img src="https://komarev.com/ghpvc/?username=xeraze&color=000000&style=flat-square&label=PROFILE+VIEWS" alt="Views" />
-</div>
