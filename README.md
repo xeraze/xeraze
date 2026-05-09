@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rect&color=000000&height=150&section=header&text=XERAZE&fontSize=75&fontColor=ffffff&desc=Fullstack%20Developer&descAlignY=70" />
+  <img src="https://capsule-render.vercel.app/api?type=rect&color=000000&height=160&section=header&text=XERAZE&fontSize=80&fontColor=ffffff&desc=System%20Architect%20%7C%20Fullstack%20Developer&descAlignY=72&descAlign=50" />
 
   <br/>
 
@@ -13,22 +13,38 @@
 
 <br/>
 
-### Technical Stack
+<p align="center">
+  <i>"Code is like humor. When you have to explain it, it’s bad."</i>
+</p>
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/fire.png" width="100%">
+</div>
+
+### 🛠 Technical Arsenal
 
 <table width="100%">
   <tr>
-    <td width="50%" align="center" valign="top">
-      <h4>🖥 Backend</h4>
-      <img src="https://skillicons.dev/icons?i=py,php,java,rust,go,c,cpp,cs,lua,nodejs,mysql,postgres&perline=4" />
+    <td width="33%" align="center" valign="top">
+      <h4>Backend</h4>
+      <img src="https://skillicons.dev/icons?i=py,php,java,rust,go,c,cpp,cs,lua&perline=3" />
     </td>
-    <td width="50%" align="center" valign="top">
-      <h4>🎨 Frontend</h4>
-      <img src="https://skillicons.dev/icons?i=html,css,js,ts,react,nextjs&perline=3" />
+    <td width="33%" align="center" valign="top">
+      <h4>Frontend</h4>
+      <img src="https://skillicons.dev/icons?i=js,ts,html,css,react,nextjs&perline=3" />
+    </td>
+    <td width="33%" align="center" valign="top">
+      <h4>Tools</h4>
+      <img src="https://skillicons.dev/icons?i=nodejs,linux,docker,git,mysql,postgres,postman&perline=3" />
     </td>
   </tr>
 </table>
 
 <br/>
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/fire.png" width="100%">
+</div>
 
 ### Stats
 
@@ -36,15 +52,21 @@
   <table border="0">
     <tr>
       <td>
-        <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=xeraze&theme=gruvbox" height="170" />
+        <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=xeraze&theme=gruvbox" height="180" />
       </td>
       <td>
-        <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=xeraze&theme=gruvbox" height="170" />
+        <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=xeraze&theme=gruvbox" height="180" />
       </td>
     </tr>
   </table>
   
   <br/>
   
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=xeraze&layout=compact&theme=gruvbox&hide_border=true" width="400" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=xeraze&layout=compact&theme=gruvbox&hide_border=true" width="450" />
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="https://komarev.com/ghpvc/?username=xeraze&color=000000&style=flat-square&label=TERMINAL+ACCESS" alt="Views" />
 </div>
