@@ -53,8 +53,5 @@
   </table>
   
   <br/>
-  
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=xeraze&layout=compact&theme=gruvbox&hide_border=true" width="400" />
-</div>
 
 <br/>
