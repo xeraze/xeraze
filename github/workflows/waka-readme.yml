@@ -23,4 +23,3 @@ jobs:
           SYMBOL_VERSION: 1
           STOP_AT_OTHER: true
           COMMIT_MESSAGE: "chore: update waka-readme stats"
-
