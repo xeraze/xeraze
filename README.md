@@ -41,11 +41,11 @@
 
 ## ⟢ Coding Activity
 
-<div align="center">
-
-  <img src="https://wakatime.com/badge/user/ТВОЙ_USER_ID.svg" alt="WakaTime Total Time" />
-
-</div>
+<!--START_SECTION:waka-->
+```text
+Обновится автоматически после первого запуска Action
+```
+<!--END_SECTION:waka-->
 
 <br/>
 
