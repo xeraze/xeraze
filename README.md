@@ -15,9 +15,7 @@
 
 <br/>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0a0a0a,50:6e6e6e,100:0a0a0a&height=2" width="100%">
-
-<h2 align="center"><img src="https://raw.githubusercontent.com/xeraze/xeraze/main/assets/icon-arrow.svg?sanitize=true" width="18" valign="middle" />&nbsp; Tech Stack</h2>
+<h2 align="center">Tech Stack</h2>
 
 <div align="center">
   <strong>Backend</strong><br /><br />
@@ -29,9 +27,7 @@
 
 <br/>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0a0a0a,50:6e6e6e,100:0a0a0a&height=2" width="100%">
-
-<h2 align="center"><img src="https://raw.githubusercontent.com/xeraze/xeraze/main/assets/icon-arrow.svg?sanitize=true" width="18" valign="middle" />&nbsp; Coding Activity</h2>
+<h2 align="center">Codding Activity</h2>
 
 <div align="center">
   <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=xeraze&layout=compact&theme=dark&bg_color=00000000&title_color=ffffff&text_color=ffffff&border_color=ffffff&hide_border=false&langs_count=10" />
@@ -39,9 +35,7 @@
 
 <br/>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0a0a0a,50:6e6e6e,100:0a0a0a&height=2" width="100%">
-
-<h2 align="center"><img src="https://raw.githubusercontent.com/xeraze/xeraze/main/assets/icon-arrow.svg?sanitize=true" width="18" valign="middle" />&nbsp; GitHub Stats</h2>
+<h2 align="center">GitHub Stats</h2>
 
 <div align="center">
   <table border="0">
@@ -57,8 +51,6 @@
 </div>
 
 <br/>
-
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0a0a0a,50:6e6e6e,100:0a0a0a&height=2" width="100%">
 
 <div align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:2e2e2e,100:141414&height=100&section=footer" />
