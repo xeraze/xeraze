@@ -15,8 +15,6 @@
 
 <br/>
 
----
-
 <h2 align="center">Tech Stack</h2>
 
 <div align="center">
@@ -29,8 +27,6 @@
 
 <br/>
 
----
-
 <h2 align="center">Coding Activity</h2>
 
 <div align="center">
@@ -38,8 +34,6 @@
 </div>
 
 <br/>
-
----
 
 <h2 align="center">GitHub Stats</h2>
 
@@ -57,8 +51,6 @@
 </div>
 
 <br/>
-
----
 
 <div align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:2e2e2e,100:141414&height=100&section=footer" />
