@@ -4,7 +4,7 @@
   <a href="https://t.me/xrzeoff">
     <img src="https://img.shields.io/badge/TELEGRAM-000000?style=for-the-badge&logo=telegram&logoColor=white" />
   </a>
-  <a href="https://discord.gg/tXFxhTcm7H">
+  <a href="https://discord.com/users/1404735389603860503">
     <img src="https://img.shields.io/badge/DISCORD-1a1a1a?style=for-the-badge&logo=discord&logoColor=white" />
   </a>
 <br/><br/>
@@ -27,7 +27,7 @@
 ⟢ Coding Activity
 
 <div align="center">
-  <img src="https://wakatime.com/share/@xrze/e7c8fc44-7c27-495f-a973-eadcdbfb349e.svg" width="100%" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=xeraze&layout=compact&theme=dark&bg_color=00000000&title_color=ffffff&text_color=ffffff&border_color=ffffff&hide_border=false&langs_count=10" />
 </div>
 <br/>
 <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/dark.png" width="100%">
