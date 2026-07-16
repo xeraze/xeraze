@@ -4,11 +4,11 @@
   <a href="https://t.me/xrzeoff">
     <img src="https://img.shields.io/badge/TELEGRAM-0d0d0d?style=for-the-badge&logo=telegram&logoColor=e5e5e5" />
   </a>
-  <a href="https://discord.gg/tXFxhTcm7H">
+  <a href="discord.com/users/1404735389603860503">
     <img src="https://img.shields.io/badge/DISCORD-0d0d0d?style=for-the-badge&logo=discord&logoColor=e5e5e5" />
   </a>
 <br/><br/>
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=20&duration=3000&pause=1200&color=CCCCCC&center=true&vCenter=true&width=460&lines=Fullstack+Developer;Focused+on+clean%2C+maintainable+code;Always+improving" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=20&duration=3000&pause=1200&color=CCCCCC&center=true&vCenter=true&width=460&lines=Creating+flexible+solutions;Focused+on+clean+%2C+maintainable+code;Always+improving" />
 <br/><br/>
   <img src="https://lanyard.cnrad.dev/api/1404735389603860503?theme=dark&bg=0d1117&animated=true&hideDiscrim=true&borderRadius=12px&showDisplayName=true&hideActivity=true" />
 </div>
