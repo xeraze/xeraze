@@ -27,7 +27,7 @@
 ⟢ Coding Activity
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=xeraze&layout=compact&theme=dark&bg_color=00000000&title_color=ffffff&text_color=ffffff&border_color=ffffff&hide_border=false&langs_count=10" />
+  <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=xeraze&layout=compact&theme=dark&bg_color=00000000&title_color=ffffff&text_color=ffffff&border_color=ffffff&hide_border=false&langs_count=10" />
 </div>
 <br/>
 <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/dark.png" width="100%">
