@@ -1,7 +1,7 @@
 <div align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:141414,100:2e2e2e&height=180&section=header&text=XERAZE&fontSize=70&fontColor=ffffff&desc=Fullstack%20Developer&descAlignY=70&descAlign=50&animation=fadeIn" />
   <br/>
-  <a href="https://t.me/xrzeoff"><img src="https://img.shields.io/badge/Telegram-1c1c1c?style=for-the-badge&logo=telegram&logoColor=white" /></a><a href="https://discord.com/users/1404735389603860503"><img src="https://img.shields.io/badge/Discord-1c1c1c?style=for-the-badge&logo=discord&logoColor=white" /></a>
+  <a href="https://t.me/xrzeoff"><img src="https://raw.githubusercontent.com/xeraze/xeraze/main/assets/telegram-button.svg" /></a><a href="https://discord.com/users/1404735389603860503"><img src="https://raw.githubusercontent.com/xeraze/xeraze/main/assets/discord-button.svg" /></a>
 <br/><br/>
   <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=20&duration=3000&pause=1200&color=CCCCCC&center=true&vCenter=true&width=460&lines=Creating+flexible+solutions;Focused+on+clean+%2C+maintainable+code;Always+improving" />
 <br/><br/>
