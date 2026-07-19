@@ -27,7 +27,7 @@
   <table border="0">
     <tr>
       <td>
-        <img src="https://github-readme-stats.vercel.app/api?username=xeraze&show_icons=true&theme=dark&bg_color=00000000&title_color=ffffff&text_color=ffffff&border_color=ffffff&icon_color=ffffff&hide_border=false&count_private=true" height="170" />
+        <img src="https://github-readme-stats-rose-ten-77.vercel.app/api?username=xeraze&show_icons=true&theme=dark&bg_color=00000000&title_color=ffffff&text_color=ffffff&border_color=ffffff&icon_color=ffffff&hide_border=false&count_private=true" height="170" />
       </td>
       <td>
         <img src="https://streak-stats.demolab.com?user=xeraze&theme=dark&background=00000000&border=ffffff&stroke=ffffff&ring=ffffff&fire=ffffff&currStreakLabel=ffffff" height="170" />
