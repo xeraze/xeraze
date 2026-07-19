@@ -27,10 +27,10 @@
   <table border="0">
     <tr>
       <td>
-        <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=xeraze&theme=dark&bg_color=00000000&title_color=ffffff&text_color=ffffff&border_color=ffffff&icon_color=ffffff" height="170" />
+        <img src="https://github-readme-stats.vercel.app/api?username=xeraze&show_icons=true&theme=dark&bg_color=00000000&title_color=ffffff&text_color=ffffff&border_color=ffffff&icon_color=ffffff&hide_border=false" height="170" />
       </td>
       <td>
-        <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=xeraze&theme=dark&bg_color=00000000&title_color=ffffff&text_color=ffffff&border_color=ffffff&icon_color=ffffff&chart_color=ffffff" height="170" />
+        <img src="https://github-readme-streak-stats.herokuapp.com/?user=xeraze&theme=dark&background=00000000&border=ffffff&stroke=ffffff&ring=ffffff&fire=ffffff&currStreakLabel=ffffff" height="170" />
       </td>
     </tr>
   </table>
