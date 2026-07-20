@@ -11,7 +11,7 @@
 <h2 align="center">Tech Stack</h2>
 <div align="center">
   <strong>Backend</strong><br /><br />
-  <img src="https://skillicons.dev/icons?i=c,cs,cpp,java,nodejs,rust,py,lua,npm&perline=9" />
+  <img src="https://skillicons.dev/icons?i=c,cs,cpp,java,rust,ruby,py,lua&perline=9" />
   <br/><br/>
   <strong>Frontend</strong><br /><br />
   <img src="https://skillicons.dev/icons?i=html,css,js,ts,react&perline=9" />
