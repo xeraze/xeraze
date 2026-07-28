@@ -5,7 +5,7 @@
 <br/><br/>
   <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=20&duration=3000&pause=1200&color=CCCCCC&center=true&vCenter=true&width=460&lines=Creating+flexible+solutions;Focused+on+clean+%2C+maintainable+code;Always+improving" />
 <br/><br/>
-  <img src="https://lanyard.cnrad.dev/api/1404735389603860503?theme=dark&bg=1c1c1c&animated=true&hideDiscrim=true&borderRadius=16px&showDisplayName=true&hideActivity=true&hideBadges=true" />
+  <img src="https://lanyard.cnrad.dev/api/1404735389603860503?theme=dark&bg=1c1c1c&animated=true&hideDiscrim=false&borderRadius=16px&showDisplayName=true&hideActivity=false&hideBadges=false" />
 </div>
 <br/>
 <h2 align="center">Tech Stack</h2>
