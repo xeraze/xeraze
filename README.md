@@ -19,7 +19,7 @@
 <br/>
 <h2 align="center">Coding Activity</h2>
 <div align="center">
-    <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=xeraze&layout=compact&theme=dark&bg_color=00000000&title_color=ffffff&text_color=ffffff&border_color=ffffff&hide_border=false&langs_count=10&hide=Shell,PowerShell,Makefile,CMake,Jupyter%20Notebook,Dockerfile&exclude_repo=repo1,repo2" />
+    <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=xeraze&layout=compact&theme=dark&bg_color=00000000&title_color=ffffff&text_color=ffffff&border_color=ffffff&hide_border=false&langs_count=10&hide=Shell,PowerShell,Cython,Batchfile,Astro,Makefile,CMake,Jupyter%20Notebook,Dockerfile&exclude_repo=repo1,repo2" />
 </div>
 <br/>
 <h2 align="center">GitHub Stats</h2>
